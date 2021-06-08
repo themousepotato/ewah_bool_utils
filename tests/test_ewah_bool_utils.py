@@ -9,13 +9,7 @@ import os
 import pyximport
 import time
 
-parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
-pyximport.install(pyimport=True,
-                  setup_args={'include_dirs': [np.get_include(),
-                                               os.path.join(parent_dir, 'ewah_bool_utils'),
-                                               os.path.join(parent_dir, 'ewah_bool_utils/cpp')]})
-
-from .test_ewah_bool_utils_cy import *
+from ewah_bool_utils.ewah_bool_testing_utils import *
 
 np.random.seed(0)
 
